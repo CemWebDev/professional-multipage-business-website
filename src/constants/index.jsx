@@ -49,6 +49,39 @@ export const features = [
   },
 ];
 
+export const pricingPlans = [
+  {
+    id: 1,
+    title: "Basic Plan",
+    price: "$29",
+    features: ["Basic support", "Access to all features", "1 user account"],
+    description:
+      "Ideal for individuals or small teams looking for essential features to get started.",
+    mostPopular: false,
+  },
+  {
+    id: 2,
+    title: "Pro Plan",
+    price: "$79",
+    features: [
+      "Priority support",
+      "Advanced features",
+      "Up to 5 user accounts",
+    ],
+    description:
+      "Perfect for growing teams that need more advanced tools and priority support.",
+    mostPopular: true,
+  },
+  {
+    id: 3,
+    title: "Enterprise Plan",
+    price: "$119",
+    features: ["24/7 support", "Custom solutions", "Unlimited user accounts"],
+    description:
+      "Designed for larger organizations requiring custom solutions and unlimited access.",
+    mostPopular: false,
+  },
+];
 
 export const sections = [
   {
@@ -106,39 +139,5 @@ export const sections = [
     subtitle: "",
     description: "",
     component: "Pricing",
-    pricingPlans: [
-      {
-        id: 1,
-        title: "Basic Plan",
-        price: "$29/month",
-        features: ["Basic support", "Access to all features", "1 user account"],
-        description:
-          "Ideal for individuals or small teams looking for essential features to get started.",
-      },
-      {
-        id: 2,
-        title: "Pro Plan",
-        price: "$79/month",
-        features: [
-          "Priority support",
-          "Advanced features",
-          "Up to 5 user accounts",
-        ],
-        description:
-          "Perfect for growing teams that need more advanced tools and priority support.",
-      },
-      {
-        id: 3,
-        title: "Enterprise Plan",
-        price: "Contact us",
-        features: [
-          "24/7 support",
-          "Custom solutions",
-          "Unlimited user accounts",
-        ],
-        description:
-          "Designed for larger organizations requiring custom solutions and unlimited access.",
-      },
-    ],
   },
 ];
