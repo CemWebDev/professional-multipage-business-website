@@ -1,5 +1,5 @@
 import { sections, features } from "../../constants";
-import FeatureCard from "../common/FeatureCard";
+import FeatureCard from "../UI/FeatureCard";
 import SectionHeader from "../common/SectionHeader";
 
 const Features = () => {

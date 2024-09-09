@@ -1,7 +1,7 @@
 import { Fragment } from "react";
-import Header from "../components/sections/Header";
 import { Outlet } from "react-router-dom";
-import Footer from "../components/sections/Footer";
+import Header from "../components/common/Header";
+import Footer from "../components/common/Footer";
 
 const Root = () => {
   return (

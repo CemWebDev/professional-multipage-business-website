@@ -1,6 +1,6 @@
 import SectionHeader from "../common/SectionHeader";
 import { sections, testimonials } from "../../constants";
-import TestimonialCard from "../common/TestimonialCard";
+import TestimonialCard from "../UI/TestimonialCard";
 
 const Testimonials = () => {
   const testimonialsData = sections.find(

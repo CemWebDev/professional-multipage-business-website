@@ -1,6 +1,6 @@
 import SectionHeader from "../common/SectionHeader";
 import { sections, pricingPlans } from "../../constants/index";
-import PricingCard from "../common/PricingCard";
+import PricingCard from "../UI/PricingCard";
 
 const Pricing = () => {
   const pricingData = sections.find((section) => section.type === "pricing");

@@ -1,5 +1,5 @@
 import { FaRegCheckCircle } from "react-icons/fa";
-import CustomButton from "../UI/CustomButton";
+import CustomButton from "./CustomButton";
 import useNavigation from "../../hooks/useNavigation";
 
 const PricingCard = ({ title, price, description, mostPopular, features }) => {
