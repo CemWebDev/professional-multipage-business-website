@@ -201,6 +201,11 @@ export const communityLinks = [
   { label: "Twitter", href: "/" },
 ];
 
+export const signInInputFields = [
+  { id: 1, type: "email", placeholder: "you@company.com" },
+  { id: 2, type: "password", placeholder: "Password" },
+];
+
 export const signUpInputFields = [
   {
     label: "Full Name",
