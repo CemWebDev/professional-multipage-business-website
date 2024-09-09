@@ -17,7 +17,7 @@ const Contact = () => {
           <input
             type="text"
             placeholder="Enter your mail here..."
-            className="px-10 bg-transparent w-full rounded-sm py-2 border border-neutral-300 focus:border-white outline-none text-white"
+            className="px-10 bg-transparent w-full rounded-sm py-2 border placeholder:text-white border-neutral-300 focus:border-white outline-none text-white"
           />
           <CustomButton className="bg-neutral-300 w-full hover:bg-white text-purple-600 py-2 px-4 border border-transparent">
             Subscribe
