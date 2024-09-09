@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import AuthHeader from "../components/auth/AuthHeader";
 import CustomButton from "../components/UI/CustomButton";
+import { signInInputFields } from "../constants";
 import { FaGoogle } from "react-icons/fa";
 
 const SignIn = () => {
@@ -27,16 +28,14 @@ const SignIn = () => {
           </span>
         </div>
         <form className="flex flex-col gap-4 w-full">
-          <input
-            type="email"
-            placeholder="you@company.com"
-            className="px-4 py-3 bg-gray-800 border border-gray-700  focus:outline-none focus:border-gray-400 text-white placeholder-gray-400"
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            className="px-4 py-3 bg-gray-800 border border-gray-700 focus:outline-none focus:border-gray-400 text-white placeholder-gray-400"
-          />
+          {signInInputFields.map((input) => (
+            <input
+              key={input.id}
+              type={input.type}
+              placeholder={input.placeholder}
+              className="px-4 py-3 bg-gray-800 border border-gray-700  focus:outline-none focus:border-gray-400 text-white placeholder-gray-400"
+            />
+          ))}
           <div className="flex items-center justify-between my-2 text-sm">
             <div className="flex items-center gap-1">
               <input type="checkbox" />
