@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 import Header from "../components/sections/Header";
 import { Outlet } from "react-router-dom";
+import Footer from "../components/sections/Footer";
 
 const Root = () => {
   return (
@@ -9,6 +10,7 @@ const Root = () => {
       <main className="max-w-7xl mx-auto font-montserrat">
         <Outlet />
       </main>
+      <Footer />
     </Fragment>
   );
 };
