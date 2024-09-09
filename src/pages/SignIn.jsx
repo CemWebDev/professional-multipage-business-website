@@ -1,8 +1,14 @@
+import { useNavigate } from "react-router-dom";
 import AuthHeader from "../components/auth/AuthHeader";
 import CustomButton from "../components/UI/CustomButton";
 import { FaGoogle } from "react-icons/fa";
 
 const SignIn = () => {
+  const navigate = useNavigate();
+  const handleSignUpButton = () => {
+    navigate("/sign-up");
+  };
+
   return (
     <section className="max-w-7xl mx-auto mt-10 px-4 flex flex-col items-center gap-20">
       <div className="text-center">
@@ -31,9 +37,27 @@ const SignIn = () => {
             placeholder="Password"
             className="px-4 py-3 bg-gray-800 border border-gray-700 focus:outline-none focus:border-gray-400 text-white placeholder-gray-400"
           />
+          <div className="flex items-center justify-between my-2 text-sm">
+            <div className="flex items-center gap-1">
+              <input type="checkbox" />
+              <span className="text-neutral-300">Keep me signed in</span>
+            </div>
+            <div className="text-blue-500 cursor-pointer hover:text-blue-600">
+              Forgot password?
+            </div>
+          </div>
           <CustomButton className="bg-purple-600 text-white w-full py-3 px-4  hover:bg-purple-700">
             Sign In
           </CustomButton>
+          <div className="text-sm text-center">
+            Don't you have an account?{" "}
+            <span
+              onClick={handleSignUpButton}
+              className="text-blue-500 cursor-pointer hover:text-blue-600"
+            >
+              Sign up
+            </span>
+          </div>
         </form>
       </div>
     </section>
