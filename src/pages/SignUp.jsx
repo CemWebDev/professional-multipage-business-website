@@ -53,7 +53,7 @@ const LogIn = () => {
           </CustomButton>
           <div className="text-center text-sm text-gray-500 mt-2">
             Already have an account?{" "}
-            <span className="text-blue-500" onClick={handleSignInButton}>
+            <span className="text-blue-500 cursor-pointer hover:text-blue-600" onClick={handleSignInButton}>
               Sign in
             </span>
           </div>
