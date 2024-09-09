@@ -3,7 +3,7 @@ import { Fragment } from "react";
 const SectionHeader = ({ title, subtitle, description }) => {
   return (
     <Fragment>
-      <h1 className="text-4xl font-bold max-w-4xl lg:max-w-5xl my-6">
+      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold max-w-4xl lg:max-w-5xl my-6">
         {title}
         {subtitle && (
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-600 to-purple-500">
