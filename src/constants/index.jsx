@@ -200,3 +200,20 @@ export const communityLinks = [
   { label: "GitHub", href: "/" },
   { label: "Twitter", href: "/" },
 ];
+
+export const signUpInputFields = [
+  {
+    label: "Full Name",
+    placeholder: "First and last name",
+    type: "text",
+    id: 1,
+  },
+  {
+    label: "Company Name",
+    placeholder: "Your company or project name",
+    type: "text",
+    id: 2,
+  },
+  { label: "Work Email", placeholder: "you@company.com", type: "email", id: 3 },
+  { label: "Password", placeholder: "Password", type: "password", id: 4 },
+];
