@@ -4,6 +4,13 @@ import { MdOutlineSecurity } from "react-icons/md";
 import { IoIosCloud } from "react-icons/io";
 import { RiCustomerServiceFill } from "react-icons/ri";
 
+import client1 from "../assets/images/client-1.jpg";
+import client2 from "../assets/images/client-2.jpg";
+import client3 from "../assets/images/client-3.jpg";
+import client4 from "../assets/images/client-4.jpg";
+import client5 from "../assets/images/client-5.jpg";
+import client6 from "../assets/images/client-6.jpg";
+
 export const features = [
   {
     id: 1,
@@ -103,41 +110,69 @@ export const sections = [
   },
   {
     id: 3,
-    type: "testimonials",
-    title: "What Our Clients Say",
-    subtitle: "",
-    description: "",
-    component: "Testimonials",
-    testimonials: [
-      {
-        id: 1,
-        name: "Jane Doe",
-        role: "CEO at TechCorp",
-        content:
-          "This service has transformed our business operations. The innovative solutions provided are top-notch and have significantly improved our efficiency.",
-      },
-      {
-        id: 2,
-        name: "John Smith",
-        role: "Founder of StartupX",
-        content:
-          "An exceptional experience from start to finish. The team understood our needs and delivered results beyond our expectations.",
-      },
-      {
-        id: 3,
-        name: "Alice Johnson",
-        role: "Marketing Director at MarketMasters",
-        content:
-          "Highly recommend their services. The strategies and solutions offered have been crucial in driving our growth and achieving our goals.",
-      },
-    ],
-  },
-  {
-    id: 4,
     type: "pricing",
     title: "Pricing Plans",
     subtitle: "",
     description: "",
     component: "Pricing",
+  },
+  {
+    id: 4,
+    type: "testimonials",
+    title: "What Our Clients Say",
+    subtitle: "",
+    description: "",
+    component: "Testimonials",
+  },
+];
+
+export const testimonials = [
+  {
+    id: 1,
+    name: "Jane Doe",
+    role: "CEO at TechCorp",
+    content:
+      "This service has transformed our business operations. The innovative solutions provided are top-notch and have significantly improved our efficiency.",
+    image: client1,
+  },
+  {
+    id: 2,
+    name: "John Smith",
+    role: "Founder of StartupX",
+    content:
+      "An exceptional experience from start to finish. The team understood our needs and delivered results beyond our expectations. The personalized approach really set them apart.",
+    image: client2,
+  },
+  {
+    id: 3,
+    name: "Alice Johnson",
+    role: "Marketing Director at MarketMasters",
+    content:
+      "Highly recommend their services. The strategies and solutions offered have been crucial in driving our growth and achieving our goals. Our marketing campaigns have never been more successful.",
+    image: client3,
+  },
+  {
+    id: 4,
+    name: "Michael Brown",
+    role: "COO at FinTech Solutions",
+    content:
+      "Their expertise and innovative thinking have been a game-changer for us. Our operational efficiency has increased dramatically, and we've seen a significant improvement in our bottom line.",
+    image: client4,
+  },
+  {
+    id: 5,
+    name: "Sarah Wilson",
+    role: "Head of Product at Creatives Inc.",
+    content:
+      "Working with this team has been a pleasure. Their solutions are creative, well-executed, and have made a noticeable impact on our product development cycle. We're now able to launch new features faster and with greater confidence.",
+    image: client5,
+  },
+  {
+    id: 6,
+    name: "David Lee",
+    role: "CTO at InnovateX",
+    content:
+      "The level of innovation and dedication this team brings to the table is unmatched. Their solutions have propelled our technology infrastructure to new heights, allowing us to scale efficiently.",
+    image: client6,
   },
 ];
