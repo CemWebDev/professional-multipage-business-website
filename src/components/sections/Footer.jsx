@@ -3,7 +3,7 @@ import { resourcesLinks, platformLinks, communityLinks } from "../../constants";
 
 const Footer = () => {
   return (
-    <footer className="max-w-[1100px] xl:max-w-full py-4 px-8">
+    <footer className="max-w-[1100px] mx-auto xl:max-w-full py-4 px-8">
       <div className="flex items-center sm:items-start flex-wrap gap-8 justify-between mt-10 border-t border-neutral-500 py-4">
         <div className="text-3xl uppercase font-bold tracking-wider text-fuchsia-600">
           <Link>Logo</Link>
