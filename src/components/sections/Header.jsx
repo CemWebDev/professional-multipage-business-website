@@ -10,11 +10,11 @@ const Header = () => {
   const toggleDropdown = () => {
     setDropdown((prevState) => !prevState);
   };
+  const handleSignUpButton = () => {
+    navigate("/sign-up");
+  };
   const handleSignInButton = () => {
     navigate("/sign-in");
-  };
-  const handleLoginButton = () => {
-    navigate("/login");
   };
 
   return (
@@ -25,13 +25,13 @@ const Header = () => {
         </Link>
         <div className="hidden md:flex items-center gap-4">
           <CustomButton
-            onClick={handleLoginButton}
+            onClick={handleSignInButton}
             className="bg-transparent text-purple-500 py-2 px-6 hover:text-white text-lg"
           >
             Sign In
           </CustomButton>
           <CustomButton
-            onClick={handleSignInButton}
+            onClick={handleSignUpButton}
             className="text-white bg-gradient-to-r from-fuchsia-600 to-purple-500 py-2 px-6 text-lg"
           >
             Sign up
@@ -48,13 +48,13 @@ const Header = () => {
         <div className="absolute z-20 lg:hidden inset-x-0 top-full mt-4 bg-neutral-800 py-2 w-[90%] mx-auto">
           <div className="flex items-center flex-col gap-5 w-[90%] mx-auto">
             <CustomButton
-              onClick={handleLoginButton}
+              onClick={handleSignInButton}
               className="bg-transparent text-purple-500 py-2 px-6 hover:text-white text-lg w-full"
             >
               Sign In
             </CustomButton>
             <CustomButton
-              onClick={handleSignInButton}
+              onClick={handleSignUpButton}
               className="text-white bg-gradient-to-r from-purple-800 to-fuchsia-900 py-2 px-6 text-lg w-full"
             >
               Sign up
