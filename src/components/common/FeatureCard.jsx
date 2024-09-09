@@ -1,6 +1,6 @@
 const FeatureCard = ({ icon, title, content }) => {
   return (
-    <div className="rounded-lg border border-neutral-600/80 shadow-md overflow-hidden p-2 flex flex-col items-start gap-4 sm:gap-3">
+    <div className="rounded-lg border border-neutral-600/80 shadow-md overflow-hidden p-6 flex flex-col items-start gap-4 sm:gap-3">
       <div className="w-12 h-12 bg-gradient-to-r from-fuchsia-600 to-purple-500 flex items-center justify-center rounded-full">
         {icon}
       </div>
