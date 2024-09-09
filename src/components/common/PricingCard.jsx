@@ -1,7 +1,9 @@
 import { FaRegCheckCircle } from "react-icons/fa";
 import CustomButton from "../UI/CustomButton";
+import useNavigation from "../../hooks/useNavigation";
 
 const PricingCard = ({ title, price, description, mostPopular, features }) => {
+  const { goToSignIn } = useNavigation();
   return (
     <div className="rounded-lg shadow-md relative border border-neutral-200/80 p-4">
       <div>
@@ -15,9 +17,7 @@ const PricingCard = ({ title, price, description, mostPopular, features }) => {
           <span className="text-4xl font-bold mr-1">{price}</span>{" "}
           <span className="text-sm font-light text-neutral-400">/month</span>
         </h1>
-        <p className="mt-6 text-sm text-slate-gray">
-          {description}
-        </p>
+        <p className="mt-6 text-sm text-slate-gray">{description}</p>
         <ul className="flex flex-col items-start gap-5 mt-8">
           {features.map((feature, index) => (
             <li key={index} className="flex items-center gap-2 text-sm">
@@ -28,7 +28,10 @@ const PricingCard = ({ title, price, description, mostPopular, features }) => {
             </li>
           ))}
         </ul>
-        <CustomButton className="border border-purple-400/50 w-full mt-12 py-4 mb-4 font-bold hover:border-purple-700 hover:shadow-xl shadow-purple-600">
+        <CustomButton
+          onClick={goToSignIn}
+          className="border border-purple-400/50 w-full mt-12 py-4 mb-4 font-bold hover:border-purple-700 hover:shadow-xl shadow-purple-600"
+        >
           Get Started
         </CustomButton>
       </div>
