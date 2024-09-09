@@ -21,7 +21,7 @@ const Hero = () => {
             Learn More
           </CustomButton>
         </div>
-        <img src="/hero-image.jpg" alt="Hero Image" className="w-full" />
+        <img src="/hero-image.jpg" alt="Hero Image" className="w-full my-6 lg:my-9" />
       </div>
     </section>
   );
