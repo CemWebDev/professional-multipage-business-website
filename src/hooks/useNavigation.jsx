@@ -6,8 +6,9 @@ const useNavigation = () => {
   const goToHome = () => navigate("/");
   const goToSignUp = () => navigate("/sign-up");
   const goToSignIn = () => navigate("/sign-in");
+  const goToForgotPassword = () => navigate("/forgot-password");
 
-  return { goToHome, goToSignUp, goToSignIn };
+  return { goToHome, goToSignUp, goToSignIn, goToForgotPassword };
 };
 
 export default useNavigation;
