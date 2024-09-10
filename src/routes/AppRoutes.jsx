@@ -3,6 +3,7 @@ import Home from "../pages/Home";
 import Root from "../layout/Root";
 import SignIn from "../pages/SignIn";
 import SignUp from "../pages/SignUp";
+import ForgotPassword from "../pages/ForgotPassword";
 
 const routes = createBrowserRouter([
   {
@@ -15,6 +16,7 @@ const routes = createBrowserRouter([
         path: "sign-up",
         element: <SignUp />,
       },
+      { path: "forgot-password", element: <ForgotPassword /> },
     ],
   },
 ]);
