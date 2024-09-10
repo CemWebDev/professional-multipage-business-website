@@ -1,8 +1,10 @@
 import { sections } from "../../constants";
 import CustomButton from "../UI/CustomButton";
 import SectionHeader from "../common/SectionHeader";
+import useNavigation from "../../hooks/useNavigation";
 
 const Hero = () => {
+  const { goToSignIn } = useNavigation();
   const heroData = sections.find((section) => section.type === "hero");
 
   return (
@@ -14,14 +16,21 @@ const Hero = () => {
           description={heroData.description}
         />
         <div className="my-8 flex items-center gap-8 flex-wrap">
-          <CustomButton className="text-white border border-neutral-500/70 py-4 px-6">
+          <CustomButton
+            className="text-white border border-neutral-500/70 py-4 px-6"
+            onClick={goToSignIn}
+          >
             Get Started for free
           </CustomButton>
           <CustomButton className="text-white bg-gradient-to-r from-fuchsia-600 to-purple-500 py-4 px-6 ">
             Learn More
           </CustomButton>
         </div>
-        <img src="/hero-image.jpg" alt="Hero Image" className="w-full my-6 lg:my-9" />
+        <img
+          src="/hero-image.jpg"
+          alt="Hero Image"
+          className="w-full my-6 lg:my-9"
+        />
       </div>
     </section>
   );
