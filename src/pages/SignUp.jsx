@@ -2,14 +2,10 @@ import { FaGoogle } from "react-icons/fa";
 import CustomButton from "../components/UI/CustomButton";
 import AuthHeader from "../components/auth/AuthHeader";
 import { signUpInputFields } from "../constants";
-import { useNavigate } from "react-router-dom";
+import useNavigation from "../hooks/useNavigation";
 
 const LogIn = () => {
-  const navigate = useNavigate();
-
-  const handleSignInButton = () => {
-    navigate("/sign-in");
-  };
+  const { goToSignIn } = useNavigation();
 
   return (
     <section className="max-w-7xl mx-auto mt-10 px-4 flex flex-col items-center gap-20">
@@ -53,7 +49,10 @@ const LogIn = () => {
           </CustomButton>
           <div className="text-center text-sm text-gray-500 mt-2">
             Already have an account?{" "}
-            <span className="text-blue-500 cursor-pointer hover:text-blue-600" onClick={handleSignInButton}>
+            <span
+              className="text-blue-500 cursor-pointer hover:text-blue-600"
+              onClick={goToSignIn}
+            >
               Sign in
             </span>
           </div>

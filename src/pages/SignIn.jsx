@@ -1,14 +1,11 @@
-import { useNavigate } from "react-router-dom";
 import AuthHeader from "../components/auth/AuthHeader";
 import CustomButton from "../components/UI/CustomButton";
 import { signInInputFields } from "../constants";
 import { FaGoogle } from "react-icons/fa";
+import useNavigation from "../hooks/useNavigation";
 
 const SignIn = () => {
-  const navigate = useNavigate();
-  const handleSignUpButton = () => {
-    navigate("/sign-up");
-  };
+  const { goToSignUp } = useNavigation();
 
   return (
     <section className="max-w-7xl mx-auto mt-10 px-4 flex flex-col items-center gap-20">
@@ -51,7 +48,7 @@ const SignIn = () => {
           <div className="text-sm text-center">
             Don't you have an account?{" "}
             <span
-              onClick={handleSignUpButton}
+              onClick={goToSignUp}
               className="text-blue-500 cursor-pointer hover:text-blue-600"
             >
               Sign up
