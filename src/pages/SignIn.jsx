@@ -5,7 +5,7 @@ import { FaGoogle } from "react-icons/fa";
 import useNavigation from "../hooks/useNavigation";
 
 const SignIn = () => {
-  const { goToSignUp } = useNavigation();
+  const { goToSignUp, goToForgotPassword } = useNavigation();
 
   return (
     <section className="max-w-7xl mx-auto mt-10 px-4 flex flex-col items-center gap-20">
@@ -38,7 +38,10 @@ const SignIn = () => {
               <input type="checkbox" />
               <span className="text-neutral-300">Keep me signed in</span>
             </div>
-            <div className="text-blue-500 cursor-pointer hover:text-blue-600">
+            <div
+              className="text-blue-500 cursor-pointer hover:text-blue-600"
+              onClick={goToForgotPassword}
+            >
               Forgot password?
             </div>
           </div>
