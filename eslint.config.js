@@ -1,11 +1,14 @@
-import js from '@eslint/js'
-import globals from 'globals'
-import react from 'eslint-plugin-react'
-import reactHooks from 'eslint-plugin-react-hooks'
-import reactRefresh from 'eslint-plugin-react-refresh'
+import js from '@eslint/js';
+import globals from 'globals';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
+import vitest from 'eslint-plugin-vitest';
 
+/** @type {import('eslint').Linter.FlatConfig[]} */
 export default [
   { ignores: ['dist'] },
+
   {
     files: ['**/*.{js,jsx}'],
     languageOptions: {
@@ -35,4 +38,17 @@ export default [
       ],
     },
   },
-]
+
+  {
+    files: ['**/*.test.{js,jsx,ts,tsx}', '**/__tests__/**/*.{js,jsx,ts,tsx}'],
+    plugins: { vitest },
+    languageOptions: {
+      globals: {
+        ...vitest.environments.vitest.globals,
+      },
+    },
+    rules: {
+      ...vitest.configs.recommended.rules,
+    },
+  },
+];
