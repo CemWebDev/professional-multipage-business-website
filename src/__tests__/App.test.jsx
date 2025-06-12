@@ -1,7 +1,13 @@
 import { render, screen } from '@testing-library/react';
 import App from '../App';
 
-test('renders Home nav link without crashing', () => {
+test('renders first Logo nav link to root ("/")', () => {
   render(<App />);
-  expect(screen.getByRole('link', { name: /home/i })).toBeInTheDocument();
+
+  const logoLinks = screen.getAllByRole('link', { name: /logo/i });
+  expect(logoLinks.length).toBeGreaterThan(0);
+
+  const firstLogo = logoLinks[0];
+  expect(firstLogo).toBeInTheDocument();
+  expect(firstLogo).toHaveAttribute('href', '/');
 });
